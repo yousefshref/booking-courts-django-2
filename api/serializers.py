@@ -37,6 +37,29 @@ class CourtSerializer(serializers.ModelSerializer):
         model = models.Court
         fields = '__all__'
 
+from rest_framework import serializers
+from.models import CourtImage, CourtVideo, CourtFeature, CourtTool
+
+class CourtImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CourtImage
+        fields = '__all__'
+
+class CourtVideoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CourtVideo
+        fields = '__all__'
+
+class CourtFeatureSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CourtFeature
+        fields = '__all__'
+
+class CourtToolSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CourtTool
+        fields = '__all__'
+
 class BookSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Book
